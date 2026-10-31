@@ -1,0 +1,17 @@
+# MATLAB
+*.asv
+*.m~
+slprj/
+*.mex*
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# Windows / editors
+desktop.ini
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,33 @@
+LAB ASSIGNMENT 9 
+______________________
+
+The 512x512 floating-point matrix HIDDENMSG contains a faint message (very dark grey on a black background) obscured by additive noise.  Message and noise are orthogonal to each other; specifically,
+
+	- noise has zero projection onto Haar wavelet scales 0,1,...,L-1
+
+	- message has zero projection onto Haar wavelet scales L,L+1,...,9
+
+Using this piece of information, perform an iterative Haar wavelet transform on HIDDENMSG.  This process will reveal the value of L, since the top left block of the displayed matrix C will at some point appear either solid grey or solid black (depending on how it is being displayed).
+
+Using the determined value of L, null out the noise (i.e., the corresponding coefficients) and restore the message component of the image to its original 512x512 size. Display it using IMSHOW with the option [], so that the message is clearly displayed against the black background.
+
+
+______________________________________________________________________________________
+
+Submit:
+
+	M-file containing your MATLAB code (it's all very similar
+	or identical to the lab script); clearly state your answer
+	for L
+
+lastname_labhw_09.pdf	
+	
+	The message obtained at the end (white on black background, 512x512).
+
+		
+
+
+ANS FOR L:
+The value of L is computed using the iterative Haar wavelet transform on the hidden message matrix. In the end, the top left part of the matrix is transformed to be almost uniform, signifying the separation between the message and noise. The number of wavelet scales in the original matrix is 10; therefore, the separation level is equal to 10 ? 4 = 6. This value is then subtracted from the noise coefficients and the hidden message "222 ROCKS!" is recreated.
+	
+	
